@@ -14,8 +14,6 @@ public class PlayerMovement : MonoBehaviour {
 
     #region Variables
 
-    private Timer timer = new Timer();
-
     private Rigidbody2D rb;
     private float curSpeed;
     private Vector2 inputModified;
