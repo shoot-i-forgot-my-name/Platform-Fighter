@@ -1,0 +1,4551 @@
+fileFormatVersion: 2
+guid: 06048a71a7ca6b34a8d224173f3cd86a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: luigi-sprite_0
+    21300002: luigi-sprite_1
+    21300004: luigi-sprite_2
+    21300006: luigi-sprite_3
+    21300008: luigi-sprite_4
+    21300010: luigi-sprite_5
+    21300012: luigi-sprite_6
+    21300014: luigi-sprite_7
+    21300016: luigi-sprite_8
+    21300018: luigi-sprite_9
+    21300020: luigi-sprite_10
+    21300022: luigi-sprite_11
+    21300024: luigi-sprite_12
+    21300026: luigi-sprite_13
+    21300028: luigi-sprite_14
+    21300030: luigi-sprite_15
+    21300032: luigi-sprite_16
+    21300034: luigi-sprite_17
+    21300036: luigi-sprite_18
+    21300038: luigi-sprite_19
+    21300040: luigi-sprite_20
+    21300042: luigi-sprite_21
+    21300044: luigi-sprite_22
+    21300046: luigi-sprite_23
+    21300048: luigi-sprite_24
+    21300050: luigi-sprite_25
+    21300052: luigi-sprite_26
+    21300054: luigi-sprite_27
+    21300056: luigi-sprite_28
+    21300058: luigi-sprite_29
+    21300060: luigi-sprite_30
+    21300062: luigi-sprite_31
+    21300064: luigi-sprite_32
+    21300066: luigi-sprite_33
+    21300068: luigi-sprite_34
+    21300070: luigi-sprite_35
+    21300072: luigi-sprite_36
+    21300074: luigi-sprite_37
+    21300076: luigi-sprite_38
+    21300078: luigi-sprite_39
+    21300080: luigi-sprite_40
+    21300082: luigi-sprite_41
+    21300084: luigi-sprite_42
+    21300086: luigi-sprite_43
+    21300088: luigi-sprite_44
+    21300090: luigi-sprite_45
+    21300092: luigi-sprite_46
+    21300094: luigi-sprite_47
+    21300096: luigi-sprite_48
+    21300098: luigi-sprite_49
+    21300100: luigi-sprite_50
+    21300102: luigi-sprite_51
+    21300104: luigi-sprite_52
+    21300106: luigi-sprite_53
+    21300108: luigi-sprite_54
+    21300110: luigi-sprite_55
+    21300112: luigi-sprite_56
+    21300114: luigi-sprite_57
+    21300116: luigi-sprite_58
+    21300118: luigi-sprite_59
+    21300120: luigi-sprite_60
+    21300122: luigi-sprite_61
+    21300124: luigi-sprite_62
+    21300126: luigi-sprite_63
+    21300128: luigi-sprite_64
+    21300130: luigi-sprite_65
+    21300132: luigi-sprite_66
+    21300134: luigi-sprite_67
+    21300136: luigi-sprite_68
+    21300138: luigi-sprite_69
+    21300140: luigi-sprite_70
+    21300142: luigi-sprite_71
+    21300144: luigi-sprite_72
+    21300146: luigi-sprite_73
+    21300148: luigi-sprite_74
+    21300150: luigi-sprite_75
+    21300152: luigi-sprite_76
+    21300154: luigi-sprite_77
+    21300156: luigi-sprite_78
+    21300158: luigi-sprite_79
+    21300160: luigi-sprite_80
+    21300162: luigi-sprite_81
+    21300164: luigi-sprite_82
+    21300166: luigi-sprite_83
+    21300168: luigi-sprite_84
+    21300170: luigi-sprite_85
+    21300172: luigi-sprite_86
+    21300174: luigi-sprite_87
+    21300176: luigi-sprite_88
+    21300178: luigi-sprite_89
+    21300180: luigi-sprite_90
+    21300182: luigi-sprite_91
+    21300184: luigi-sprite_92
+    21300186: luigi-sprite_93
+    21300188: luigi-sprite_94
+    21300190: luigi-sprite_95
+    21300192: luigi-sprite_96
+    21300194: luigi-sprite_97
+    21300196: luigi-sprite_98
+    21300198: luigi-sprite_99
+    21300200: luigi-sprite_100
+    21300202: luigi-sprite_101
+    21300204: luigi-sprite_102
+    21300206: luigi-sprite_103
+    21300208: luigi-sprite_104
+    21300210: luigi-sprite_105
+    21300212: luigi-sprite_106
+    21300214: luigi-sprite_107
+    21300216: luigi-sprite_108
+    21300218: luigi-sprite_109
+    21300220: luigi-sprite_110
+    21300222: luigi-sprite_111
+    21300224: luigi-sprite_112
+    21300226: luigi-sprite_113
+    21300228: luigi-sprite_114
+    21300230: luigi-sprite_115
+    21300232: luigi-sprite_116
+    21300234: luigi-sprite_117
+    21300236: luigi-sprite_118
+    21300238: luigi-sprite_119
+    21300240: luigi-sprite_120
+    21300242: luigi-sprite_121
+    21300244: luigi-sprite_122
+    21300246: luigi-sprite_123
+    21300248: luigi-sprite_124
+    21300250: luigi-sprite_125
+    21300252: luigi-sprite_126
+    21300254: luigi-sprite_127
+    21300256: luigi-sprite_128
+    21300258: luigi-sprite_129
+    21300260: luigi-sprite_130
+    21300262: luigi-sprite_131
+    21300264: luigi-sprite_132
+    21300266: luigi-sprite_133
+    21300268: luigi-sprite_134
+    21300270: luigi-sprite_135
+    21300272: luigi-sprite_136
+    21300274: luigi-sprite_137
+    21300276: luigi-sprite_138
+    21300278: luigi-sprite_139
+    21300280: luigi-sprite_140
+    21300282: luigi-sprite_141
+    21300284: luigi-sprite_142
+    21300286: luigi-sprite_143
+    21300288: luigi-sprite_144
+    21300290: luigi-sprite_145
+    21300292: luigi-sprite_146
+    21300294: luigi-sprite_147
+    21300296: luigi-sprite_148
+    21300298: luigi-sprite_149
+    21300300: luigi-sprite_150
+    21300302: luigi-sprite_151
+    21300304: luigi-sprite_152
+    21300306: luigi-sprite_153
+    21300308: luigi-sprite_154
+    21300310: luigi-sprite_155
+    21300312: luigi-sprite_156
+    21300314: luigi-sprite_157
+    21300316: luigi-sprite_158
+    21300318: luigi-sprite_159
+    21300320: luigi-sprite_160
+    21300322: luigi-sprite_161
+    21300324: luigi-sprite_162
+    21300326: luigi-sprite_163
+    21300328: luigi-sprite_164
+    21300330: luigi-sprite_165
+    21300332: luigi-sprite_166
+    21300334: luigi-sprite_167
+    21300336: luigi-sprite_168
+    21300338: luigi-sprite_169
+    21300340: luigi-sprite_170
+    21300342: luigi-sprite_171
+    21300344: luigi-sprite_172
+    21300346: luigi-sprite_173
+    21300348: luigi-sprite_174
+    21300350: luigi-sprite_175
+    21300352: luigi-sprite_176
+    21300354: luigi-sprite_177
+    21300356: luigi-sprite_178
+    21300358: luigi-sprite_179
+    21300360: luigi-sprite_180
+    21300362: luigi-sprite_181
+    21300364: luigi-sprite_182
+    21300366: luigi-sprite_183
+    21300368: luigi-sprite_184
+    21300370: luigi-sprite_185
+    21300372: luigi-sprite_186
+    21300374: luigi-sprite_187
+    21300376: luigi-sprite_188
+    21300378: luigi-sprite_189
+    21300380: luigi-sprite_190
+    21300382: luigi-sprite_191
+    21300384: luigi-sprite_192
+    21300386: luigi-sprite_193
+    21300388: luigi-sprite_194
+    21300390: luigi-sprite_195
+    21300392: luigi-sprite_196
+    21300394: luigi-sprite_197
+    21300396: luigi-sprite_198
+    21300398: luigi-sprite_199
+    21300400: luigi-sprite_200
+    21300402: luigi-sprite_201
+    21300404: luigi-sprite_202
+    21300406: luigi-sprite_203
+    21300408: luigi-sprite_204
+    21300410: luigi-sprite_205
+    21300412: luigi-sprite_206
+    21300414: luigi-sprite_207
+    21300416: luigi-sprite_208
+    21300418: luigi-sprite_209
+    21300420: luigi-sprite_210
+    21300422: luigi-sprite_211
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: luigi-sprite_0
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 883
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac1e816a437e762418d83f8a8d3d0586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_1
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 883
+        width: 15
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b44049e3ef973d5458732a1883231536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_2
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 884
+        width: 12
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f7c672b0b588b74bb67104e28c47082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_3
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 884
+        width: 12
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf02c6a76d29fb542ac67b066fdd6883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 883
+        width: 15
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127c8b505ed5070478fd53ceea09d773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_5
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 883
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a1c728280451f44ac6221169d59af7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_6
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 843
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d9eeff496c5ec4a93467c04ee81fee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_7
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 844
+        width: 14
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a5818b45e2b8f74a8bd173b240df71d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_8
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 843
+        width: 15
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2039f018f1afb604cb8116e185365c15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_9
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 843
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd5a364ced60ecc4ea991b27be4ba806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_10
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 843
+        width: 14
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fbe24253c92bff439b441d4beda2664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_11
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 843
+        width: 14
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b15315a3b4743478c36a17ea91a8c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_12
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 843
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ca1d42739865b49b19c6c780bb9c94
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_13
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 843
+        width: 15
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f91ef9c2fd70b8a44b144ce011e7bfe5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_14
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 844
+        width: 14
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6b5181de53c7a43a79b3dd5c1811dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_15
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 843
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5653b2dcd50c54428179f45d5dda3c3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_16
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 803
+        width: 26
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd03dce4b704d9c4cb5e2eb139fa1147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_17
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 803
+        width: 25
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8f46bd4be22b648a4119939f9e12b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_18
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 803
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8acf3a270d7f7840ab5d78c72505cc2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_19
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 803
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd093fdf190a1045bfb5f3d22ec178c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_20
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 803
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa5f9fdea205724495dc7fab0ae9275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_21
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 803
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a096d3a3a3291d49baa20216d58a08d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_22
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 803
+        width: 25
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63466d680c1439f4db7cd3c9f46ec54d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_23
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 803
+        width: 26
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb6ab0a05e236b41b0f601e8f3ec0ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_24
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 763
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf4a90a35dfbea4da90df8de1b2c3a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_25
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 763
+        width: 14
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed146df6f34d54649afaa33b970a4259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_26
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 764
+        width: 14
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b01c13ec19103cc4389b65b938d9f2ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_27
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 763
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54fc064ce7697f644b1c23a86a6fb18e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_28
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 763
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb2763a743f05b45ad4aa338a7ffb09
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_29
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 763
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 526d34bec4d37ae4fb4efbe5e62c4a56
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_30
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 763
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab89a38e7249d8f4ea4503a8ab5d7be2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_31
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 764
+        width: 14
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f9904fe627288a47b1e0c21d48f26a9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_32
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 763
+        width: 14
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c2f1f0406fd9c469b9a245ee5dc997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_33
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 763
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67c1f3980a4ee848b8b72b2e83f358c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_34
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 722
+        width: 14
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262e79be64a1dcd48b44210d42ffd423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_35
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 718
+        width: 16
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961a5d135af1ef248a7b8428ec64305b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_36
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 718
+        width: 16
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315587ec41bad3e46a257e66700c88e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_37
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 718
+        width: 16
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c956278ed08df4f9319569eee91087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_38
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 718
+        width: 14
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7e0f6f1e0cd8e40bca74d5408ff2a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_39
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 718
+        width: 14
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12f157388f69f0479b5ba8dfb8603ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_40
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 718
+        width: 16
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8fc40ca4872f143b76b4203f1a33b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_41
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 718
+        width: 16
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1709f0ae7eb259b4984222ddc27bd45c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_42
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 718
+        width: 16
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a892d0a6bef324e93b387a6302f1bd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_43
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 722
+        width: 14
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660935e61e2bd5647a2de67728be8af2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_44
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 678
+        width: 16
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204052846412f6241bf547b3144675f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_45
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 679
+        width: 16
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63228c2b450f397419f2bd8d97baed84
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_46
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 678
+        width: 16
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315064982c33278469776aaba22bff58
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_47
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 678
+        width: 21
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb6f97a8f16a3447b5e488cf2aa149e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_48
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 677
+        width: 16
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 770f39464095edf4494291ea1750782d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_49
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 677
+        width: 16
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d110e5198f8b79a4ab07250ea1a165b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_50
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 678
+        width: 21
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88d8b21fdb9a9e4291156e2c2665b0c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_51
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 678
+        width: 16
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e6a478f97767f4193f9e36e2094043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_52
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 679
+        width: 16
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57cd095602e9a8f419b4de202c8d0e20
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_53
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 678
+        width: 16
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a344c6550c0f9b14ab61289feed09f6e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_54
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 638
+        width: 26
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af30f58505d31e540b738270d228206c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_55
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 638
+        width: 25
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 191c4a0e556cd23438cb07a08ed12571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_56
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 638
+        width: 19
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e38cbacd5d07cd4cbbfcfe7c42f1368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_57
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 638
+        width: 19
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1486f53673709147a66d5b5a19557de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_58
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 638
+        width: 19
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5ca71e17450114f82eac32ee98c1c1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_59
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 638
+        width: 19
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a193f54f889f0f438306210678bae61
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_60
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 638
+        width: 19
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a98157c4b9d7d48b79ba070e313387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_61
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 638
+        width: 19
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c9612188c3040a41a7c7dbefa52fe58
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_62
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 638
+        width: 25
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 936090a519d45db4b82c85b5a81a6340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_63
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 638
+        width: 26
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f613a576a7146c4086b828ac111d74e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_64
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 598
+        width: 19
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111ca85d4cea268439e17b0b5d744f64
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_65
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 598
+        width: 18
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8872435cee0612e4a9a1f36cd485692b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_66
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 598
+        width: 19
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe3a627c210160642b4cd77da5d9b5e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_67
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 598
+        width: 27
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 932a37e701e02f640b064201e75f21a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_68
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 598
+        width: 27
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f8fb77f852a4a44939942884ddb53b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_69
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 598
+        width: 19
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e17953817c12b949bd7c3c4c2e1bd2b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_70
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 598
+        width: 18
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a68d63e8050294caea2f1b740d3bfb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_71
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 598
+        width: 19
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e627a51f913636418e914edafc67fa7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_72
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 561
+        width: 19
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6372e10550486434abcf1f029903134b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_73
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 562
+        width: 20
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16169152db26a2a49893313f1ab8502f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_74
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 561
+        width: 19
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4940c347aea4844983ffcd71e564697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_75
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 561
+        width: 20
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe22015fc970a594bbb8afeaac394afa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_76
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 561
+        width: 20
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96421950104c0a44c9b347920a102aec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_77
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 561
+        width: 19
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c99f449e11f09f942994ca32ac36b6ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_78
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 562
+        width: 20
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3d8902a530dfe84398a0ed3250fa114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_79
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 561
+        width: 19
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7adacb294e32094997b76a3604231b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_80
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 522
+        width: 22
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57663e35ac6b6384cb46a7c2b1387fee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_81
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 518
+        width: 23
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72440500bdf5fbd4d8c5ff198d6841a9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_82
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 518
+        width: 23
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 096475a53a5ab0a4b9979eab38f17891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_83
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 517
+        width: 22
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b315a32c72b535b4ca5d03043e5136fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_84
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 517
+        width: 23
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb75c3e37ce0e964992724b2ec80325e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_85
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 517
+        width: 21
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1392a8ed4b32ee74fa004386432f387d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_86
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 517
+        width: 21
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5cd34f07307ac44931a0f9e6a7f75e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_87
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 517
+        width: 23
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7049e6107de6a458f4f609bedeae19
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_88
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 517
+        width: 22
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed82063593b5fb549b7fef2ab2517507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_89
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 518
+        width: 23
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524347efa0038e64ab02441a6da2eed8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_90
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 518
+        width: 23
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e18cf3d8a3045974397839fd1719b9ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_91
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 522
+        width: 22
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61505576f0b38e74ab6f4db38a54e5f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_92
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 477
+        width: 16
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058d62253288fee478ee4d95291d8d74
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_93
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 477
+        width: 16
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b194a239e828dd44b88a222732f5d1e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_94
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 477
+        width: 16
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cbac27d1d93bf94f897ac7ce73d68a8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_95
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 478
+        width: 16
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b5f6d0514cd8d1469fff9c6a0298003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_96
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 477
+        width: 22
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c639c0e909ca9941bccd3823b8565d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_97
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 476
+        width: 16
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154ef9f0c87e2c74a9a1b3cb0b3ab70d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_98
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 476
+        width: 16
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85bde466905787541a93e3dd18e1fafa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_99
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 477
+        width: 22
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3041f3d7c4d74534f8546c8788a6db10
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_100
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 478
+        width: 16
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6459c25bca5761149bab86fece5d0893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_101
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 477
+        width: 16
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de282bf7d4ec9241afec8e46929e646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_102
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 477
+        width: 16
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9534abae37c6bb04da8220bcde1e8753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_103
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 477
+        width: 16
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27d58a45467f864bb3bb84d744a5327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_104
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 437
+        width: 33
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826bb10cad6ab0541a15b701cadba04f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_105
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 437
+        width: 32
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f02613bc38e7a42acc160297e7efc2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_106
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 438
+        width: 24
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5fa7a7c2bc0b654b9af66a35af70cf1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_107
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 437
+        width: 24
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 145ca0a91021d50418ea9edc1e4c55bd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_108
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 437
+        width: 24
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b40afa3f7d0bda45aee60f548041b13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_109
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 437
+        width: 24
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f9e1b3c6653a14589556c823020ad8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_110
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 437
+        width: 24
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c2d7ee14ee4cb458be393472fee965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_111
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 438
+        width: 24
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c6b06b169f68bb4ea705c33e8790480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_112
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 437
+        width: 32
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f15ec158af17e24fb9f53a1a3da999b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_113
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 437
+        width: 33
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa6b290763aeb0409d97e33df847d67
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_114
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 397
+        width: 23
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0212a3bd998f0d84bb170ba41595f491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_115
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 397
+        width: 24
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dce9f5c3bc722bb438d669c122577c67
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_116
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 398
+        width: 34
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3486aca48bfcf6e47aea62db08afb3d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_117
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 398
+        width: 34
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2936afb83f27b91429cbfee5debd6452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_118
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 397
+        width: 24
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07165060aea03b447af3d15d5f14366d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_119
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 397
+        width: 23
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 721e277dcc97c544190ed82e99e78511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_120
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 358
+        width: 24
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b99d2f51e3e7dd4c855a0a83a4bb174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_121
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 358
+        width: 24
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5461a738fe8c3d04391c096fb2bfcb25
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_122
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 357
+        width: 24
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b805eaea8582bf4abb87ebe6983f382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_123
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 357
+        width: 22
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40fff71fa0a56984dbba12a8b400a93d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_124
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 358
+        width: 23
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e193eb599bef50479f190efc8afd78a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_125
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 358
+        width: 23
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd013351a4376c4ebfdc39a1faf94a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_126
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 357
+        width: 22
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f48249315c2100449d244977933c2e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_127
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 357
+        width: 24
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1d1aae6fbf47a45a7d924d309e39b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_128
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 358
+        width: 24
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec64635eeab508744a418acb89d714cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_129
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 358
+        width: 24
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac18cc74f9ace274cb66e9b367ceae91
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_130
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 321
+        width: 21
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022082a2ebf927245829ee469b7fb6ac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_131
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 321
+        width: 20
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af53b3da89af90043a76bb1faf309ef6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_132
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 321
+        width: 22
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e7f035c3c381b4b9803f84e54de62f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_133
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 320
+        width: 20
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632d4869beefa1c4191a7d53cabbad82
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_134
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 320
+        width: 20
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ca115f8914d6042b2b41658fe478e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_135
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 321
+        width: 22
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3e4773b5399f55458d1c48a098fb9dc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_136
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 321
+        width: 20
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa33f7d8bc626cf4ab5bac28fade10d5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_137
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 321
+        width: 21
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd376d013840c4458d56372554cbf4e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_138
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 282
+        width: 14
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5561e94733c8d147a5615545f4d4f97
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_139
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 278
+        width: 16
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3302d8c1c5bf78449cfb75a63b06dfd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_140
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 278
+        width: 16
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca1c4f9140fb1844c984fcb8fff17e81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_141
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 278
+        width: 16
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd560a121852e134cb7ca900ff8e7751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_142
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 278
+        width: 14
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb23adeb0097f7d4bbcf2c6eab885528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_143
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 278
+        width: 14
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb26b8cd9ecbc94d8886f014b7d8edb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_144
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 278
+        width: 16
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687a516e24915474db470a8b7ba3d6ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_145
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 278
+        width: 16
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 221b1d8540c2d8f4885df8b07d74f522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_146
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 278
+        width: 16
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc6737168829a0748972b15cb0f7b2cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_147
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 282
+        width: 14
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73cf2253d7d4d1c41b29e8cc925ea65b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_148
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 238
+        width: 16
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a7bcd84440f0247b48d4ef6c08160d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_149
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 239
+        width: 16
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a7040e0b42cca41a948f900fb2158f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_150
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 238
+        width: 16
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 425dce65d761f9541a9dae7aa38edbce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_151
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 238
+        width: 21
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7bee8b0125f468418f22d579b2871f3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_152
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 237
+        width: 16
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1015261f486e9794aa0d10d8b338105a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_153
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 237
+        width: 16
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add6253b93148f648ae504405b6cf129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_154
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 238
+        width: 21
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c3bbfc9bd60b3d40a64eb49affb3764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_155
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 238
+        width: 16
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afaadd3c4c537d142bff6b4b9e2a31b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_156
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 239
+        width: 16
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a91bca22909ff94d8eddbee51425163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_157
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 238
+        width: 16
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5fc664f333ac484385fceb8538415f3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_158
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 198
+        width: 26
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0257e8972df2ae948a3a251fd113cc3f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_159
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 198
+        width: 25
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac1f020baeaebe4a99b678eca4123c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_160
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 198
+        width: 19
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36dae9d8e1f047e408a829da2e9c3903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_161
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 198
+        width: 19
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05a69397512b5047b0505f191303cc0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_162
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 198
+        width: 19
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46ae16d721b0cc24f99183d04a7c3aaa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_163
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 198
+        width: 19
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2528089897c180840a28b258a712de32
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_164
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 198
+        width: 19
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d7f1591d7e2fc4593ecf9916bd7923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_165
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 198
+        width: 19
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39ae52756610874b8b06920e50445f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_166
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 198
+        width: 25
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5e4b266e24e414e89e4b36cadf84b4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_167
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 198
+        width: 26
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de9432b28008224880274f6f019b635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_168
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 158
+        width: 14
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79fea6124d777c14b9b30f0ce6561bf7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_169
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 158
+        width: 14
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 152511360e184004498781de5a0a964b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_170
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 158
+        width: 19
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5162dd12f63785a42ae14f3d4dbfd03b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_171
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 158
+        width: 18
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d9af346fe63d0459cd21f6bb4349a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_172
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 158
+        width: 19
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e6e047e8db6cb24981f5589db116e9d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_173
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 158
+        width: 27
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6959581eeecf53c4a8c54b138058eb77
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_174
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 158
+        width: 27
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d6283da44f38e4187ab331128f98ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_175
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 158
+        width: 19
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9474ce334a7d46e46beccea8be7dbf6f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_176
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 158
+        width: 18
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9e80870f6a6d34e8fbaac4b36b13a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_177
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 158
+        width: 19
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd438177c31bd4e4ab887c3b49fef59d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_178
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 158
+        width: 14
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64bf63599098bfc4eaf27a1c8012f972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_179
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 158
+        width: 14
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe48abd5099469f44bd1391eb7d4a999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_180
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 121
+        width: 19
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0924842c028f32e4d8c64ebb0c2c9214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_181
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 122
+        width: 20
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07903644469e94d4f975633f73198871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_182
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 121
+        width: 19
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9557a40b95d94f845bbebcafd60d4a81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_183
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 121
+        width: 20
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f3be03ca907d7468b0abcbc0c8148b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_184
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 121
+        width: 20
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5293494de4331c5499459d0d3795dbf5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_185
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 121
+        width: 19
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd5f2b906b7d654dbeeef7381825fc5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_186
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 122
+        width: 20
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74ae7532e083354c94cd6ff59021a1a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_187
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 121
+        width: 19
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f53e3ad6b00c8c4b912149140b58d1b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_188
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 82
+        width: 21
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc0d7466062b6894a9c3e9f84353d69d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_189
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 78
+        width: 23
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7109cc1cadd6f5348a4b8b1977dd6e13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_190
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 78
+        width: 23
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60064c1ae0b51f4382f38384e4c460f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_191
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 77
+        width: 22
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ee2c55a72ef6d4cb0e5556a6b1ab96
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_192
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 77
+        width: 21
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77746514793b7a841865a45021430aca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_193
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 77
+        width: 21
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36289c44bfdb8514e91c25a8545c7abf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_194
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 77
+        width: 22
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9d9346ce736384eb05a18a9c2feba0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_195
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 78
+        width: 23
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e330f3dbca038b24da3f4494dc0d8dea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_196
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 78
+        width: 23
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7c2f9d030dee64baac0c38a3051eff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_197
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 82
+        width: 21
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9281cc3f043274391ab9758e555ce1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_198
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 37
+        width: 16
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049879542bec5474f98bf599f38ffc26
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_199
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 38
+        width: 23
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0712f2c046fe5874a83a68756551ff57
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_200
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 37
+        width: 16
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f98861db95b214a4ea55e9ca0f3dc16c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_201
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 37
+        width: 16
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1153aa57ff23fed4d8653ae6994ba6c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_202
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 37
+        width: 16
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 937b6d3892d73e74b823d37d66e33b97
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_203
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 37
+        width: 23
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d4fbbdd95077f148846adfb7853315a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_204
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 37
+        width: 23
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f56773fff82e024b86491e962e7968a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_205
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 37
+        width: 16
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d324a34e14ad3b4f84871c17364ee06
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_206
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 37
+        width: 16
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0fe0d77b9584ad45ae65dfb31b8634c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_207
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 37
+        width: 16
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5134f559c45d3a48b839ef563fe271b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_208
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 38
+        width: 23
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfbb501844ef314a976607a2e9e58f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_209
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 37
+        width: 16
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f572e62e625296141ac3f4475fa5f947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_210
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 1
+        width: 16
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89b8889096e8f8e42a389e6ec659d981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luigi-sprite_211
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 0
+        width: 16
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310cd4b0c366574448229c0e7c51fbd1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f9c132c9e7a8acc48bbc41b326f1903f
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
