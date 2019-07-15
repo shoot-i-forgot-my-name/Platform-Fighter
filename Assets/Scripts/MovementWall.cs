@@ -1,10 +1,29 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using UnityEngine;
 
-namespace Assets.Scripts {
-    class MovementWall {
+[RequireComponent(typeof(Rigidbody2D), typeof(CollisionFlagsHandler))]
+public class MovementWall : MonoBehaviour{
+
+    #region Variables
+
+    private Rigidbody2D rb; // Reference to Rigidbody2D
+    private CollisionFlagsHandler cf; // Reference to CollisionFlagsHandler
+
+    public InputManager im; // Reference to InputManager
+
+    #endregion
+
+    private void Start () {
+        rb = GetComponent<Rigidbody2D>();
+        cf = GetComponent<CollisionFlagsHandler>();
     }
+
+    private void Update () {
+
+        if (cf.collisionFlags == CollisionFlags.Sides) {
+
+        }
+    }
+
 }

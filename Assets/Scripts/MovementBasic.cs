@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(CollisionFlagsHandler))]
-public class PlayerMovement : MonoBehaviour {
+[RequireComponent(typeof(Rigidbody2D), typeof(CollisionFlagsHandler), typeof(InputManager))]
+public class MovementBasic : MonoBehaviour {
 
     #region Variables
 
-    private Rigidbody2D rb; // Reference to rigidbody
-    private CollisionFlagsHandler cf; // Reference to collision flags
+    private Rigidbody2D rb; // Reference to Rigidbody2D
+    private CollisionFlagsHandler cf; // Reference to CollisionFlagsHandler
     [HideInInspector]
     public float curSpeed; // Current speed of the player
-    private Vector2 inputModified; // Input that only accepts 1 or -1
+    public InputManager im; // Reference to InputManager
 
     public float moveSpeed = 10; // Default movement speed
     public float smoothStop = 10f; // Time for the character to stop moving
@@ -29,15 +29,11 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void Update () {
-        var inputRaw = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        inputModified.x = (inputRaw.x == 0) ? inputModified.x : inputRaw.x; // Accepts -1 or 1
-        inputModified.y = (inputRaw.y == 0) ? inputModified.y : inputRaw.y; // Accepts -1 or 1
-
         var jumping = Input.GetButton("Jump") && cf.collisionFlags == CollisionFlags.Below;
 
         JumpPlayer(jumping); // Call this regardless of input
 
-        var xMovement = GetMoveX(inputRaw); // Get movement on x-axis
+        var xMovement = GetMoveX(im.rawInput, im.modifiedInput); // Get movement on x-axis
 
         if (!(cf.collisionFlags == CollisionFlags.Below)) {
             xMovement.x *= airMovement; // Percentage of movement when on air
@@ -46,7 +42,7 @@ public class PlayerMovement : MonoBehaviour {
         transform.Translate(xMovement * Time.deltaTime); // Move the player
     }
 
-    private Vector2 GetMoveX (Vector2 inputRaw) {
+    private Vector2 GetMoveX (Vector2 inputRaw, Vector2 inputModified) {
         {
             var smoothTime = (inputRaw.x == 0) ? smoothStop : smoothMove; // Either smoothStop or smoothMove
             var targetSpeed = (inputRaw.x == 0) ? 0 : moveSpeed; // Either 0 or the default speed
