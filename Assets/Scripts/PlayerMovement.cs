@@ -7,13 +7,14 @@ public class PlayerMovement : MonoBehaviour {
 
     #region Static Variables
 
-    CollisionFlags collisionFlags = CollisionFlags.None; // CollisionFlags
     public static float limAngle = 45; // Limiting angle
 
     #endregion
 
     #region Variables
 
+    private int calculateCounter = 2; // Dictates whenever we should recalculate on next collision
+    private CollisionType collideType = CollisionType.None; // CollisionFlags alternative
     private Rigidbody2D rb; // Reference to rigidbody
     [HideInInspector]
     public float curSpeed; // Current speed of the player
@@ -38,13 +39,13 @@ public class PlayerMovement : MonoBehaviour {
         inputModified.x = (inputRaw.x == 0) ? inputModified.x : inputRaw.x; // Accepts -1 or 1
         inputModified.y = (inputRaw.y == 0) ? inputModified.y : inputRaw.y; // Accepts -1 or 1
 
-        var jumping = Input.GetButton("Jump") && collisionFlags == CollisionFlags.Below;
+        var jumping = Input.GetButton("Jump") && collideType == CollisionType.Below;
 
         JumpPlayer(jumping); // Call this regardless of input
 
         var xMovement = GetMoveX(inputRaw); // Get movement on x-axis
 
-        if (!(collisionFlags == CollisionFlags.Below)) {
+        if (!(collideType == CollisionType.Below)) {
             xMovement.x *= airMovement; // Percentage of movement when on air
         }
 
@@ -69,23 +70,43 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
 
-    private void OnCollisionEnter2D (Collision2D Collision) {
-        var normal = Collision.GetContact(0).normal; // Get normal
-        var angle = Mathf.Rad2Deg * Mathf.Asin(normal.y); // Calculate angle
+    private void UpdateCollisionType (Vector2 normal) {
+        var aboveBottom = Mathf.Rad2Deg * Mathf.Asin(normal.y); // Calculate angle
+        var rightLeft = Mathf.Rad2Deg * Mathf.Asin(normal.x); // Calculate angle
 
-        // Get collision flags
-        if (angle < -limAngle) {
-            collisionFlags = CollisionFlags.Above;
-        } else if (angle > limAngle) {
-            collisionFlags = CollisionFlags.Below;
-        } else {
-            collisionFlags = CollisionFlags.Sides;
+        // Get collision types
+        if (aboveBottom < -limAngle) {
+            collideType += CollisionType.Above;
+        }
+
+        if (aboveBottom > limAngle) {
+            collideType += CollisionType.Below;
+        }
+
+        if (rightLeft < -limAngle) {
+            collideType += CollisionType.Right;
+        }
+
+        if (rightLeft > limAngle) {
+            collideType += CollisionType.Left;
+        }
+    }
+
+    private void OnCollisionEnter2D (Collision2D collision) {
+        UpdateCollisionType(collision.GetContact(0).normal);
+    }
+
+
+    private void OnCollisionStay2D (Collision2D collision) {
+        if (calculateCounter == 0) {
+            UpdateCollisionType(collision.GetContact(0).normal);
+            calculateCounter++;
         }
     }
 
     private void OnCollisionExit2D () {
-        // Get collision flags
-        collisionFlags = CollisionFlags.None;
+        calculateCounter--;
+        collideType = CollisionType.None;
     }
 
 }
