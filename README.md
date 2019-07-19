@@ -1,2 +1,4 @@
 # Platform-Fighter
- Unity 3D game inspired by Smash and Rivals of Aether
+
+Unity 2D game inspired by Smash and Rivals of Aether
+
