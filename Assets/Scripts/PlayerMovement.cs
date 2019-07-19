@@ -13,8 +13,8 @@ public class PlayerMovement : MonoBehaviour {
 
     #region Variables
 
-    private CollisionType collideType = CollisionType.None; // CollisionFlags
-
+    private int calculateCounter = 2; // Dictates whenever we should recalculate on next collision
+    private CollisionType collideType = CollisionType.None; // CollisionFlags alternative
     private Rigidbody2D rb; // Reference to rigidbody
     [HideInInspector]
     public float curSpeed; // Current speed of the player
@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour {
         var aboveBottom = Mathf.Rad2Deg * Mathf.Asin(normal.y); // Calculate angle
         var rightLeft = Mathf.Rad2Deg * Mathf.Asin(normal.x); // Calculate angle
 
-        // Get collision flags
+        // Get collision types
         if (aboveBottom < -limAngle) {
             collideType += CollisionType.Above;
         }
@@ -97,16 +97,16 @@ public class PlayerMovement : MonoBehaviour {
         UpdateCollisionType(collision.GetContact(0).normal);
     }
 
-    int calculateCounter = 0;
+
     private void OnCollisionStay2D (Collision2D collision) {
-        if (calculateCounter % 2 == 0) {
+        if (calculateCounter == 0) {
             UpdateCollisionType(collision.GetContact(0).normal);
-            calculateCounter += 2;
+            calculateCounter++;
         }
     }
 
     private void OnCollisionExit2D () {
-        calculateCounter += 2;
+        calculateCounter--;
         collideType = CollisionType.None;
     }
 

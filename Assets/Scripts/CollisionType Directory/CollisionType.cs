@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Collections;
 using System;
 
-sealed class CollisionType {
+public sealed class CollisionType {
 
     #pragma warning disable CS0628 // New protected member declared in sealed class
-    protected bool[] id; // Is faster than strings
-    protected string idName = "none"; // Convert id to string
+    protected bool[] id; // Maybe faster than using string just for string.Contains(string)
+    protected string idName = "none"; // Convert bool array to a string
     #pragma warning restore CS0628 // New protected member declared in sealed class
 
     public CollisionType (bool bit0, bool bit1, bool bit2, bool bit3) {
@@ -98,13 +98,12 @@ sealed class CollisionType {
     /// <param name="right"></param>
     /// <returns></returns>
     public static bool operator == (CollisionType left, CollisionType right) {
+        // Don't remove the parenthises, it's the only thing keeping the code from going bongers
         return ((left.id[0] || right.id[0]) && left.id[0] == right.id[0]) ||
                ((left.id[1] || right.id[1]) && left.id[1] == right.id[1]) ||
                ((left.id[2] || right.id[2]) && left.id[2] == right.id[2]) ||
                ((left.id[3] || right.id[3]) && left.id[3] == right.id[3]);
     }
-    // false, false, false, true
-    // true, false, false, false
 
     /// <summary>
     /// Returns true if the left dosen't contain a part of right
@@ -113,18 +112,11 @@ sealed class CollisionType {
     /// <param name="right"></param>
     /// <returns></returns>
     public static bool operator != (CollisionType left, CollisionType right) {
-        return !(left.id[0]
-                 || right.id[0]
-                 && left.id[0] == right.id[0]
-                 || left.id[1]
-                 || right.id[1]
-                 && left.id[1] == right.id[1]
-                 || left.id[2]
-                 || right.id[2]
-                 && left.id[2] == right.id[2]
-                 || left.id[3]
-                 || right.id[3]
-                 && left.id[3] == right.id[3]);
+        // Don't remove the parenthises, it's the only thing keeping the code from going bongers
+        return !(((left.id[0] || right.id[0]) && left.id[0] == right.id[0]) ||
+                 ((left.id[1] || right.id[1]) && left.id[1] == right.id[1]) ||
+                 ((left.id[2] || right.id[2]) && left.id[2] == right.id[2]) ||
+                 ((left.id[3] || right.id[3]) && left.id[3] == right.id[3]));
     }
 
     #endregion
