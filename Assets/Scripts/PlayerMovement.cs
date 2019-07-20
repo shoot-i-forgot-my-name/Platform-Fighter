@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System;
+﻿using System;
 using System.Timers;
+using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class PlayerMovement : MonoBehaviour {
@@ -11,7 +9,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public static readonly float limAngle = 45; // Limiting angle
 
-    #endregion
+    #endregion Static Variables
 
     #region Private Variables
 
@@ -23,30 +21,36 @@ public class PlayerMovement : MonoBehaviour {
     private Func<Vector2, Vector2, Vector2> OnceReturnVelocity; // Helper for clinging walls; Done once on start of clinging walls, resets
     private Vector2 velocity = Vector2.zero; // Velocity of the gameObject
     private float defaultGravScale; // Default gravity scale of the gameObject
-    private bool basicMovement = true;
+    private bool basicMovementEnabled = true;
+    private bool jumpingEnabled = true;
 
-    #endregion
+    #endregion Private Variables
 
     #region Public Variables
 
     [HideInInspector]
     public float curSpeed; // Current speed of the player
+
     [Header("Basic Movement")]
     public float moveSpeed = 10; // Default movement speed
+
     public float smoothStop = 10; // Time for the character to stop moving
     public float smoothMove = 7.5f; // Time for the character to start moving
     public float airMovement = .75f; // Percentage of the movement when on air
+
     [Header("Jumping")]
     public float jumpForce = 15; // Jump height of the character; Dependent on gravity
-    [Header("Wall Clinging")]
-    public bool wallCling = true;
+
+    [Header("Wall Sliding")]
+    private bool wallSlidingEnabled = true;
+
     public float gravityScale = .75f; // Percentage of the mass when colliding with a wall
     public float yVelocityStart = .025f; // Starting velocity of the gameObject when clinging
-    public float pushOffX = 30; 
+    public float pushOffX = 30;
     public float pushOffY = 30;
     public int milesecondTimeout = 500;
 
-    #endregion
+    #endregion Public Variables
 
     #region Private Methods
 
@@ -54,8 +58,10 @@ public class PlayerMovement : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         defaultGravScale = rb.gravityScale;
         OnceCollisionType = CallActionOnce<Vector2>(UpdateCollisionType);
-        OnceReturnVelocity = CallFuncOnce((Vector2 a) => a );
+        OnceReturnVelocity = CallFuncOnce((Vector2 a) => a);
     }
+
+    // READ: Use sign() for direction to get if the number is positively or negatively
 
     private void Update () {
         var inputRaw = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -68,82 +74,74 @@ public class PlayerMovement : MonoBehaviour {
         rb.velocity = Move(inputRaw, jumping, clingingWalls);
     }
 
-    private Vector2 Move (Vector2 inputRaw, bool jumping, bool clingingWalls) {
-        #region Initialize velocity
-
+    private Vector2 Move (Vector2 inputRaw, bool jumping, bool wallSliding) {
         velocity = new Vector2(rb.velocity.x, rb.velocity.y);
         rb.gravityScale = defaultGravScale;
 
-        #endregion
-
-        #region Moving in x-axis
-        if (basicMovement) {
-
-            {
-                var smoothTime = (inputRaw.x == 0) ? smoothStop : smoothMove; // Either smoothStop or smoothMove
-                var targetSpeed = (inputRaw.x == 0) ? 0 : moveSpeed; // Either 0 or the default speed
-                curSpeed = Mathf.Lerp(curSpeed, targetSpeed, smoothTime * Time.deltaTime); // Lerp for smooth movement
-            }
-
-            velocity.x = inputModified.x * curSpeed * ((collideType == CollisionType.None) ? airMovement : 1); // Percentage of movement when on air
-
-            // This fixes not falling while moving to the right or left AND colliding with a wall
-            if ((collideType == CollisionType.Right && inputRaw.x == 1) || (collideType == CollisionType.Left && inputRaw.x == -1)) {
-                velocity.x = 0;
-            }
-
+        if (basicMovementEnabled) {
+            MoveBasic(inputRaw);
         }
 
-        #endregion
-
-        #region Clinging walls
-
-        if (wallCling) {
-            if (clingingWalls) {
-                velocity = OnceReturnVelocity(new Vector2(velocity.x, -yVelocityStart), velocity);
-
-                if (Mathf.Sign(velocity.y) == -1) {
-                    rb.gravityScale = defaultGravScale * gravityScale;
-                }
-
-                if (Input.GetButtonDown("Jump")) {
-                    velocity.x = -inputModified.x * pushOffX;
-                    velocity.y = pushOffY;
-                    
-                    // Refactor this somehow
-                    basicMovement = false;
-                    Timer tmr = new Timer();
-                    tmr.Interval = milesecondTimeout;
-                    tmr.Elapsed += (object sender, ElapsedEventArgs e) => {
-                        basicMovement = true;
-                        tmr.Stop();
-                    };
-
-                    tmr.Start();
-                }
-
-            } else {
-                // Reset when calling once
-                OnceReturnVelocity = CallFuncOnce((Vector2 a) => a);
-            }
+        if (wallSlidingEnabled) {
+            WallSlide(wallSliding);
         }
 
-        #endregion
+        if (jumpingEnabled) {
+            Jump(jumping);
+        }
 
-        #region Jumping
+        return velocity;
+    }
 
-        if (jumping) {
+    private void MoveBasic (Vector2 inputRaw) {
+        var smoothTime = (inputRaw.x == 0) ? smoothStop : smoothMove; // Either smoothStop or smoothMove
+        var targetSpeed = (inputRaw.x == 0) ? 0 : moveSpeed; // Either 0 or the default speed
+        curSpeed = Mathf.Lerp(curSpeed, targetSpeed, smoothTime * Time.deltaTime); // Lerp for smooth movement
+
+        velocity.x = inputModified.x * curSpeed * ((collideType == CollisionType.None) ? airMovement : 1); // Percentage of movement when on air
+
+        // This fixes not falling while moving to the right or left AND colliding with a wall
+        if ((collideType == CollisionType.Right && inputRaw.x == 1) || (collideType == CollisionType.Left && inputRaw.x == -1)) {
+            velocity.x = 0;
+        }
+    }
+
+    private void WallSlide (bool wallSliding) {
+        if (!wallSliding) {
+            // Reset when calling once
+            OnceReturnVelocity = CallFuncOnce((Vector2 a) => a);
+            return;
+        }
+
+        velocity = OnceReturnVelocity(new Vector2(velocity.x, -yVelocityStart), velocity);
+
+        if (Mathf.Sign(velocity.y) == -1) {
+            rb.gravityScale = defaultGravScale * gravityScale;
+        }
+
+        if (Input.GetButtonDown("Jump")) {
+            velocity.x = -inputModified.x * pushOffX;
+            velocity.y = pushOffY;
+
+            // Refactor this somehow
+            basicMovementEnabled = false;
+            Timer tmr = new Timer();
+            tmr.Interval = milesecondTimeout;
+            tmr.Elapsed += (object sender, ElapsedEventArgs e) => {
+                basicMovementEnabled = true;
+                tmr.Stop();
+            };
+
+            tmr.Start();
+        }
+    }
+
+    private void Jump (bool jumping) {
+        if (jumping)
             velocity.y = jumpForce;
-        }
-
-        #endregion
-
-        return velocity; // Return final value
     }
 
-    private void Tmr_Elapsed (object sender, ElapsedEventArgs e) {
-        throw new NotImplementedException();
-    }
+    #region Calculate Collision Type
 
     private void UpdateCollisionType (Vector2 normal) {
         var aboveBottom = Mathf.Rad2Deg * Mathf.Asin(normal.y); // Calculate angle
@@ -176,11 +174,13 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void OnCollisionExit2D () {
-        collideType -= CollisionType.None;
         OnceCollisionType = CallActionOnce<Vector2>(UpdateCollisionType);
+        collideType -= CollisionType.None;
     }
 
-    public Action<T> CallActionOnce <T> (Action<T> action) {
+    #endregion Calculate Collision Type
+
+    public Action<T> CallActionOnce<T> (Action<T> action) {
         var contextCalled = false;
         Action<T> ret = (T param) => {
             if (!contextCalled) {
@@ -192,7 +192,7 @@ public class PlayerMovement : MonoBehaviour {
         return ret;
     }
 
-    public Func<T, TResult, TResult> CallFuncOnce <T, TResult> (Func<T, TResult> func) {
+    public Func<T, TResult, TResult> CallFuncOnce<T, TResult> (Func<T, TResult> func) {
         var contextCalled = false;
 
         Func<T, TResult, TResult> @return = (T param, TResult failParam) => {
@@ -207,7 +207,7 @@ public class PlayerMovement : MonoBehaviour {
         return @return;
     }
 
-    public Func<T, TResult> CallFuncOnce <T, TResult> (Func<T, TResult> func, TResult failParam) {
+    public Func<T, TResult> CallFuncOnce<T, TResult> (Func<T, TResult> func, TResult failParam) {
         var contextCalled = false;
 
         Func<T, TResult> @return = (T param) => {
@@ -222,6 +222,5 @@ public class PlayerMovement : MonoBehaviour {
         return @return;
     }
 
-    #endregion
-
+    #endregion Private Methods
 }
