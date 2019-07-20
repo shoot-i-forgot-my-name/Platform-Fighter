@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Timers;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class PlayerMovement : MonoBehaviour {
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour {
     private Func<Vector2, Vector2, Vector2> OnceReturnVelocity; // Helper for clinging walls; Done once on start of clinging walls, resets
     private Vector2 velocity = Vector2.zero; // Velocity of the gameObject
     private float defaultGravScale; // Default gravity scale of the gameObject
+    private bool basicMovement = true;
 
     #endregion
 
@@ -29,18 +31,20 @@ public class PlayerMovement : MonoBehaviour {
 
     [HideInInspector]
     public float curSpeed; // Current speed of the player
-
     [Header("Basic Movement")]
     public float moveSpeed = 10; // Default movement speed
     public float smoothStop = 10; // Time for the character to stop moving
     public float smoothMove = 7.5f; // Time for the character to start moving
     public float airMovement = .75f; // Percentage of the movement when on air
     [Header("Jumping")]
-    public float jumpForce = 10; // Jump height of the character; Dependent on gravity
+    public float jumpForce = 15; // Jump height of the character; Dependent on gravity
     [Header("Wall Clinging")]
-    public bool wallCling = false;
+    public bool wallCling = true;
     public float gravityScale = .75f; // Percentage of the mass when colliding with a wall
     public float yVelocityStart = .025f; // Starting velocity of the gameObject when clinging
+    public float pushOffX = 30; 
+    public float pushOffY = 30;
+    public int milesecondTimeout = 500;
 
     #endregion
 
@@ -73,18 +77,21 @@ public class PlayerMovement : MonoBehaviour {
         #endregion
 
         #region Moving in x-axis
+        if (basicMovement) {
 
-        {
-            var smoothTime = (inputRaw.x == 0) ? smoothStop : smoothMove; // Either smoothStop or smoothMove
-            var targetSpeed = (inputRaw.x == 0) ? 0 : moveSpeed; // Either 0 or the default speed
-            curSpeed = Mathf.Lerp(curSpeed, targetSpeed, smoothTime * Time.deltaTime); // Lerp for smooth movement
-        }
+            {
+                var smoothTime = (inputRaw.x == 0) ? smoothStop : smoothMove; // Either smoothStop or smoothMove
+                var targetSpeed = (inputRaw.x == 0) ? 0 : moveSpeed; // Either 0 or the default speed
+                curSpeed = Mathf.Lerp(curSpeed, targetSpeed, smoothTime * Time.deltaTime); // Lerp for smooth movement
+            }
 
-        velocity.x = inputModified.x * curSpeed * ((collideType == CollisionType.None) ? airMovement : 1); // Percentage of movement when on air
+            velocity.x = inputModified.x * curSpeed * ((collideType == CollisionType.None) ? airMovement : 1); // Percentage of movement when on air
 
-        // This fixes not falling while moving to the right or left AND colliding with a wall
-        if ((collideType == CollisionType.Right && inputModified.x == 1) || (collideType == CollisionType.Left && inputModified.x == -1)) {
-            velocity.x = 0;
+            // This fixes not falling while moving to the right or left AND colliding with a wall
+            if ((collideType == CollisionType.Right && inputRaw.x == 1) || (collideType == CollisionType.Left && inputRaw.x == -1)) {
+                velocity.x = 0;
+            }
+
         }
 
         #endregion
@@ -98,6 +105,22 @@ public class PlayerMovement : MonoBehaviour {
                 if (Mathf.Sign(velocity.y) == -1) {
                     rb.gravityScale = defaultGravScale * gravityScale;
                 }
+
+                if (Input.GetButtonDown("Jump")) {
+                    velocity.x = -inputModified.x * pushOffX;
+                    velocity.y = pushOffY;
+
+                    basicMovement = false;
+                    Timer tmr = new Timer();
+                    tmr.Interval = milesecondTimeout;
+                    tmr.Elapsed += (object sender, ElapsedEventArgs e) => {
+                        basicMovement = true;
+                        tmr.Stop();
+                    };
+
+                    tmr.Start();
+                }
+
             } else {
                 // Reset when calling once
                 OnceReturnVelocity = CallFuncOnce((Vector2 a) => a);
@@ -115,6 +138,10 @@ public class PlayerMovement : MonoBehaviour {
         #endregion
 
         return velocity; // Return final value
+    }
+
+    private void Tmr_Elapsed (object sender, ElapsedEventArgs e) {
+        throw new NotImplementedException();
     }
 
     private void UpdateCollisionType (Vector2 normal) {

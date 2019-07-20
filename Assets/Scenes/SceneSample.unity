@@ -800,9 +800,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curSpeed: 0
+  smoothTime: 54
   moveSpeed: 10
   smoothStop: 10
   smoothMove: 7.5
   airMovement: 0.75
   jumpForce: 15
-  gravityScale: 0.05
+  wallCling: 1
+  gravityScale: 0.75
+  yVelocityStart: 0.025
+  pushOffX: 7.5
+  pushOffY: 7.5
+  milesecondTimeout: 500
