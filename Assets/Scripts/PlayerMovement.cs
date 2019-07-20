@@ -109,7 +109,8 @@ public class PlayerMovement : MonoBehaviour {
                 if (Input.GetButtonDown("Jump")) {
                     velocity.x = -inputModified.x * pushOffX;
                     velocity.y = pushOffY;
-
+                    
+                    // Refactor this somehow
                     basicMovement = false;
                     Timer tmr = new Timer();
                     tmr.Interval = milesecondTimeout;
