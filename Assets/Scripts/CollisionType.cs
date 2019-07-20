@@ -6,8 +6,10 @@ using System;
 public sealed class CollisionType {
 
     #pragma warning disable CS0628 // New protected member declared in sealed class
+
     protected bool[] id; // Maybe faster than using string just for string.Contains(string)
     protected string idName = "none"; // Convert bool array to a string
+
     #pragma warning restore CS0628 // New protected member declared in sealed class
 
     public CollisionType (bool bit0, bool bit1, bool bit2, bool bit3) {
@@ -38,6 +40,31 @@ public sealed class CollisionType {
     }
 
     #region Public Methods
+
+    /// <summary>
+    /// If it is exactly equal to the other object
+    /// </summary>
+    /// <param name="right"></param>
+    /// <returns></returns>
+    public bool ExactlyEqual (CollisionType right) {
+        return id[0] == right.id[0] &&
+               id[1] == right.id[1] &&
+               id[2] == right.id[2] &&
+               id[3] == right.id[3];
+    }
+
+    /// <summary>
+    /// Returns true if the left contains a part of right
+    /// </summary>
+    /// <param name="right"></param>
+    /// <returns></returns>
+    public bool Contains (CollisionType right) {
+        // Don't remove the parenthises, it's the only thing keeping the code from going bongers
+        return ((id[0] || right.id[0]) && id[0] == right.id[0]) ||
+               ((id[1] || right.id[1]) && id[1] == right.id[1]) ||
+               ((id[2] || right.id[2]) && id[2] == right.id[2]) ||
+               ((id[3] || right.id[3]) && id[3] == right.id[3]);
+    }
 
     public override int GetHashCode () {
         int rightAdd = (id[0] ? 1 : 0) + (id[1] ? 1 : 0) + (id[2] ? 1 : 0) + (id[3] ? 1 : 0);
@@ -98,11 +125,7 @@ public sealed class CollisionType {
     /// <param name="right"></param>
     /// <returns></returns>
     public static bool operator == (CollisionType left, CollisionType right) {
-        // Don't remove the parenthises, it's the only thing keeping the code from going bongers
-        return ((left.id[0] || right.id[0]) && left.id[0] == right.id[0]) ||
-               ((left.id[1] || right.id[1]) && left.id[1] == right.id[1]) ||
-               ((left.id[2] || right.id[2]) && left.id[2] == right.id[2]) ||
-               ((left.id[3] || right.id[3]) && left.id[3] == right.id[3]);
+        return left.Contains(right);
     }
 
     /// <summary>
@@ -113,10 +136,7 @@ public sealed class CollisionType {
     /// <returns></returns>
     public static bool operator != (CollisionType left, CollisionType right) {
         // Don't remove the parenthises, it's the only thing keeping the code from going bongers
-        return !(((left.id[0] || right.id[0]) && left.id[0] == right.id[0]) ||
-                 ((left.id[1] || right.id[1]) && left.id[1] == right.id[1]) ||
-                 ((left.id[2] || right.id[2]) && left.id[2] == right.id[2]) ||
-                 ((left.id[3] || right.id[3]) && left.id[3] == right.id[3]));
+        return !left.Contains(right);
     }
 
     #endregion

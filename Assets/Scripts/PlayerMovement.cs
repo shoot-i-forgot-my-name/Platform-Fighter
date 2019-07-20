@@ -7,31 +7,44 @@ public class PlayerMovement : MonoBehaviour {
 
     #region Static Variables
 
-    public static float limAngle = 45; // Limiting angle
+    public static readonly float limAngle = 45; // Limiting angle
 
     #endregion
 
-    #region Variables
+    #region Private Variables
 
-    private int calculateCounter = 2; // Dictates whenever we should recalculate on next collision
     private CollisionType collideType = CollisionType.None; // CollisionFlags alternative
     private Rigidbody2D rb; // Reference to rigidbody
-    [HideInInspector]
-    public float curSpeed; // Current speed of the player
     private Vector2 inputModified; // Input that only accepts 1 or -1
 
-    public float moveSpeed = 10; // Default movement speed
-    public float smoothStop = 10f; // Time for the character to stop moving
-    public float smoothMove = 7.5f; // Time for the character to start moving
-
-    public float jumpHeight = 37.5f; // Jump height of the character; Dependent on gravity
-
-    public float airMovement = .75f; // Percentage of the movement when on air
+    private int calculateCounter = 2; // Dictates whenever we should recalculate on next collision
+    private Vector2 velocity = Vector2.zero; // Velocity of the gameObject
+    private float defaultGravScale; // Default gravity scale of the gameObject
 
     #endregion
+
+    #region Public Variables
+
+    [HideInInspector]
+    public float curSpeed; // Current speed of the player
+
+    [Header("Basic Movement")]
+    public float moveSpeed = 10; // Default movement speed
+    public float smoothStop = 10; // Time for the character to stop moving
+    public float smoothMove = 7.5f; // Time for the character to start moving
+    public float airMovement = .75f; // Percentage of the movement when on air
+    [Header("Jumping")]
+    public float jumpForce = 10; // Jump height of the character; Dependent on gravity
+    [Header("Wall Movement")]
+    public float gravityScale = .025f; // Percentage of the mass when colliding with a wall
+
+    #endregion
+
+    #region Private Methods
 
     private void Start () {
         rb = GetComponent<Rigidbody2D>();
+        defaultGravScale = rb.gravityScale;
     }
 
     private void Update () {
@@ -40,34 +53,42 @@ public class PlayerMovement : MonoBehaviour {
         inputModified.y = (inputRaw.y == 0) ? inputModified.y : inputRaw.y; // Accepts -1 or 1
 
         var jumping = Input.GetButton("Jump") && collideType == CollisionType.Below;
+        var clingingWalls = collideType == CollisionType.Right + CollisionType.Left && inputRaw.x != 0;
 
-        JumpPlayer(jumping); // Call this regardless of input
-
-        var xMovement = GetMoveX(inputRaw); // Get movement on x-axis
-
-        if (!(collideType == CollisionType.Below)) {
-            xMovement.x *= airMovement; // Percentage of movement when on air
-        }
-
-        transform.Translate(xMovement * Time.deltaTime); // Move the player
+        rb.velocity = Move(inputRaw, jumping, clingingWalls);
     }
 
-    private Vector2 GetMoveX (Vector2 inputRaw) {
+    private Vector2 Move (Vector2 inputRaw, bool jumping, bool clingingWalls) {
+        velocity = new Vector2(rb.velocity.x, rb.velocity.y);
+        rb.gravityScale = defaultGravScale;
+
         {
             var smoothTime = (inputRaw.x == 0) ? smoothStop : smoothMove; // Either smoothStop or smoothMove
             var targetSpeed = (inputRaw.x == 0) ? 0 : moveSpeed; // Either 0 or the default speed
             curSpeed = Mathf.Lerp(curSpeed, targetSpeed, smoothTime * Time.deltaTime); // Lerp for smooth movement
         }
 
-        return Vector2.right * inputModified * curSpeed; // Return final value
-    }
+        #region Velocity
 
-    private void JumpPlayer (bool jumping) {
-        if (jumping) {
-            // Assuming gravity is negative
-            // y-velocity = jumpHeight / gravity * -2
-            rb.velocity = new Vector2(rb.velocity.x, jumpHeight / Physics2D.gravity.y * -2);
+        velocity.x = inputModified.x * curSpeed * ((collideType == CollisionType.None) ? airMovement : 1); // Percentage of movement when on air
+
+        // This fixes not falling while moving to the right or left AND colliding with a wall
+        if ((collideType == CollisionType.Right && inputModified.x == 1) || (collideType == CollisionType.Left && inputModified.x == -1)) {
+            velocity.x = 0;
         }
+
+        if ((collideType == CollisionType.Right && inputRaw.x == 1) || (collideType == CollisionType.Left && inputRaw.x == -1)) {
+            velocity.y = Mathf.Sign(velocity.y) == -1 ? velocity.y : 0.0005f;
+            rb.gravityScale = defaultGravScale * gravityScale;
+        }
+
+        if (jumping) {
+            velocity.y = jumpForce;
+        }
+
+        #endregion
+
+        return velocity; // Return final value
     }
 
     private void UpdateCollisionType (Vector2 normal) {
@@ -96,7 +117,6 @@ public class PlayerMovement : MonoBehaviour {
         UpdateCollisionType(collision.GetContact(0).normal);
     }
 
-
     private void OnCollisionStay2D (Collision2D collision) {
         if (calculateCounter == 0) {
             UpdateCollisionType(collision.GetContact(0).normal);
@@ -106,7 +126,9 @@ public class PlayerMovement : MonoBehaviour {
 
     private void OnCollisionExit2D () {
         calculateCounter--;
-        collideType = CollisionType.None;
+        collideType -= CollisionType.None;
     }
+
+    #endregion
 
 }
