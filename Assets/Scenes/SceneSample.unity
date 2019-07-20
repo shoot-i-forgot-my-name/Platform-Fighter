@@ -314,7 +314,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244533381}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 6.55, z: 0}
+  m_LocalPosition: {x: -4.98, y: 7.63, z: 0}
   m_LocalScale: {x: 0.75854635, y: 0.15636769, z: 1.4513016}
   m_Children: []
   m_Father: {fileID: 0}
@@ -414,7 +414,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805599507}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.31, y: 2.88, z: 0}
+  m_LocalPosition: {x: -9.92, y: 2.6000004, z: 0}
   m_LocalScale: {x: 1.1675557, y: 0.15636769, z: 1.4513016}
   m_Children: []
   m_Father: {fileID: 0}
@@ -546,7 +546,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917407765}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.79, y: 4.9, z: 0}
+  m_LocalPosition: {x: 11.74, y: 4.9, z: 0}
   m_LocalScale: {x: 1.1898766, y: 4.173932, z: 1.4513016}
   m_Children: []
   m_Father: {fileID: 0}
@@ -805,9 +805,8 @@ MonoBehaviour:
   smoothMove: 7.5
   airMovement: 0.75
   jumpForce: 15
-  wallCling: 1
   gravityScale: 0.75
   yVelocityStart: 0.025
-  pushOffX: 7.5
-  pushOffY: 11.5
+  pushOffX: 11.25
+  pushOffY: 7.5
   milesecondTimeout: 500
