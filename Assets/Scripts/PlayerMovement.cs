@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour {
     [Header("Jumping")]
     public float jumpForce = 10; // Jump height of the character; Dependent on gravity
     [Header("Wall Clinging")]
+    public bool wallCling = false;
     public float gravityScale = .75f; // Percentage of the mass when colliding with a wall
     public float yVelocityStart = .025f; // Starting velocity of the gameObject when clinging
 
@@ -48,8 +49,8 @@ public class PlayerMovement : MonoBehaviour {
     private void Start () {
         rb = GetComponent<Rigidbody2D>();
         defaultGravScale = rb.gravityScale;
-        OnceCollisionType = CallOnlyOnce<Vector2>(UpdateCollisionType);
-        OnceReturnVelocity = CallOnlyOnce((Vector2 a) => a );
+        OnceCollisionType = CallActionOnce<Vector2>(UpdateCollisionType);
+        OnceReturnVelocity = CallFuncOnce((Vector2 a) => a );
     }
 
     private void Update () {
@@ -64,8 +65,14 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private Vector2 Move (Vector2 inputRaw, bool jumping, bool clingingWalls) {
+        #region Initialize velocity
+
         velocity = new Vector2(rb.velocity.x, rb.velocity.y);
         rb.gravityScale = defaultGravScale;
+
+        #endregion
+
+        #region Moving in x-axis
 
         {
             var smoothTime = (inputRaw.x == 0) ? smoothStop : smoothMove; // Either smoothStop or smoothMove
@@ -76,27 +83,36 @@ public class PlayerMovement : MonoBehaviour {
         velocity.x = inputModified.x * curSpeed * ((collideType == CollisionType.None) ? airMovement : 1); // Percentage of movement when on air
 
         // This fixes not falling while moving to the right or left AND colliding with a wall
-        print((collideType == CollisionType.Left && inputModified.x == -1));
         if ((collideType == CollisionType.Right && inputModified.x == 1) || (collideType == CollisionType.Left && inputModified.x == -1)) {
             velocity.x = 0;
         }
 
-        #region Clinging Walls
+        #endregion
 
-        if (clingingWalls) {
-            if (Mathf.Sign(velocity.y) == -1)
-                rb.gravityScale = defaultGravScale * gravityScale;
+        #region Clinging walls
 
-            velocity = OnceReturnVelocity(new Vector2(velocity.x, -yVelocityStart), velocity);
-        }else {
-            OnceReturnVelocity = CallOnlyOnce((Vector2 a) => a);
+        if (wallCling) {
+            if (clingingWalls) {
+                velocity = OnceReturnVelocity(new Vector2(velocity.x, -yVelocityStart), velocity);
+
+                if (Mathf.Sign(velocity.y) == -1) {
+                    rb.gravityScale = defaultGravScale * gravityScale;
+                }
+            } else {
+                // Reset when calling once
+                OnceReturnVelocity = CallFuncOnce((Vector2 a) => a);
+            }
         }
 
         #endregion
 
+        #region Jumping
+
         if (jumping) {
             velocity.y = jumpForce;
         }
+
+        #endregion
 
         return velocity; // Return final value
     }
@@ -133,10 +149,10 @@ public class PlayerMovement : MonoBehaviour {
 
     private void OnCollisionExit2D () {
         collideType -= CollisionType.None;
-        OnceCollisionType = CallOnlyOnce<Vector2>(UpdateCollisionType);
+        OnceCollisionType = CallActionOnce<Vector2>(UpdateCollisionType);
     }
 
-    public Action<T> CallOnlyOnce <T> (Action<T> action) {
+    public Action<T> CallActionOnce <T> (Action<T> action) {
         var contextCalled = false;
         Action<T> ret = (T param) => {
             if (!contextCalled) {
@@ -148,7 +164,7 @@ public class PlayerMovement : MonoBehaviour {
         return ret;
     }
 
-    public Func<T, TResult, TResult> CallOnlyOnce<T, TResult> (Func<T, TResult> func) {
+    public Func<T, TResult, TResult> CallFuncOnce <T, TResult> (Func<T, TResult> func) {
         var contextCalled = false;
 
         Func<T, TResult, TResult> @return = (T param, TResult failParam) => {
@@ -163,6 +179,20 @@ public class PlayerMovement : MonoBehaviour {
         return @return;
     }
 
+    public Func<T, TResult> CallFuncOnce <T, TResult> (Func<T, TResult> func, TResult failParam) {
+        var contextCalled = false;
+
+        Func<T, TResult> @return = (T param) => {
+            if (!contextCalled) {
+                contextCalled = true;
+                return func(param);
+            }
+
+            return failParam;
+        };
+
+        return @return;
+    }
 
     #endregion
 
