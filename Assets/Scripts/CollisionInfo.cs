@@ -1,18 +1,13 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
-using System.Collections;
-using System;
-
-public sealed class CollisionType {
-
-    #pragma warning disable CS0628 // New protected member declared in sealed class
+﻿public sealed class CollisionInfo {
+#pragma warning disable CS0628 // New protected member declared in sealed class
 
     protected bool[] id; // Maybe faster than using string just for string.Contains(string)
     protected string idName = "none"; // Convert bool array to a string
 
-    #pragma warning restore CS0628 // New protected member declared in sealed class
+#pragma warning restore CS0628 // New protected member declared in sealed class
 
-    public CollisionType (bool bit0, bool bit1, bool bit2, bool bit3) {
+
+    private CollisionInfo (bool bit0, bool bit1, bool bit2, bool bit3) {
         id = new bool[4] { bit0, bit1, bit2, bit3 };
 
         if (bit0 || bit1 || bit2 || bit3) {
@@ -46,7 +41,7 @@ public sealed class CollisionType {
     /// </summary>
     /// <param name="right"></param>
     /// <returns></returns>
-    public bool ExactlyEqual (CollisionType right) {
+    public bool ExactlyEqual (CollisionInfo right) {
         return id[0] == right.id[0] &&
                id[1] == right.id[1] &&
                id[2] == right.id[2] &&
@@ -58,7 +53,7 @@ public sealed class CollisionType {
     /// </summary>
     /// <param name="right"></param>
     /// <returns></returns>
-    public bool Contains (CollisionType right) {
+    public bool Contains (CollisionInfo right) {
         // Don't remove the parenthises, it's the only thing keeping the code from going bongers
         return ((id[0] || right.id[0]) && id[0] == right.id[0]) ||
                ((id[1] || right.id[1]) && id[1] == right.id[1]) ||
@@ -80,7 +75,7 @@ public sealed class CollisionType {
             return false;
         }
 
-        return Equals((CollisionType) obj);
+        return Equals((CollisionInfo) obj);
     }
 
     /// <summary>
@@ -91,7 +86,7 @@ public sealed class CollisionType {
         return idName;
     }
 
-    #endregion
+    #endregion Public Methods
 
     #region Operators
 
@@ -101,8 +96,8 @@ public sealed class CollisionType {
     /// <param name="left"></param>
     /// <param name="right"></param>
     /// <returns></returns>
-    public static CollisionType operator + (CollisionType left, CollisionType right) {
-        return new CollisionType(left.id[0] || right.id[0],
+    public static CollisionInfo operator + (CollisionInfo left, CollisionInfo right) {
+        return new CollisionInfo(left.id[0] || right.id[0],
                                  left.id[1] || right.id[1],
                                  left.id[2] || right.id[2],
                                  left.id[3] || right.id[3]);
@@ -114,8 +109,8 @@ public sealed class CollisionType {
     /// <param name="left"></param>
     /// <param name="right"></param>
     /// <returns></returns>
-    public static CollisionType operator - (CollisionType left, CollisionType right) {
-        return new CollisionType(!(!left.id[0] || !right.id[0]), !(!left.id[1] || !right.id[1]), !(!left.id[2] || !right.id[2]), !(!left.id[3] || !right.id[3]));
+    public static CollisionInfo operator - (CollisionInfo left, CollisionInfo right) {
+        return new CollisionInfo(!(!left.id[0] || !right.id[0]), !(!left.id[1] || !right.id[1]), !(!left.id[2] || !right.id[2]), !(!left.id[3] || !right.id[3]));
     }
 
     /// <summary>
@@ -124,7 +119,7 @@ public sealed class CollisionType {
     /// <param name="left"></param>
     /// <param name="right"></param>
     /// <returns></returns>
-    public static bool operator == (CollisionType left, CollisionType right) {
+    public static bool operator == (CollisionInfo left, CollisionInfo right) {
         return left.Contains(right);
     }
 
@@ -134,25 +129,29 @@ public sealed class CollisionType {
     /// <param name="left"></param>
     /// <param name="right"></param>
     /// <returns></returns>
-    public static bool operator != (CollisionType left, CollisionType right) {
+    public static bool operator != (CollisionInfo left, CollisionInfo right) {
         // Don't remove the parenthises, it's the only thing keeping the code from going bongers
         return !left.Contains(right);
     }
 
-    #endregion
+    #endregion Operators
 
     #region Static Variables
 
     // 0, 0, 0, 1
-    public static readonly CollisionType Right = new CollisionType(false, false, false, true);
-    // 0, 0, 1, 0
-    public static readonly CollisionType Left = new CollisionType(false, false, true, false);
-    // 0, 1, 0, 0
-    public static readonly CollisionType Above = new CollisionType(false, true, false, false);
-    // 1, 0, 0, 0
-    public static readonly CollisionType Below = new CollisionType(true, false, false, false);
-    // 0, 0, 0, 0
-    public static readonly CollisionType None = new CollisionType(false, false, false, false);
+    public static readonly CollisionInfo Right = new CollisionInfo(false, false, false, true);
 
-    #endregion
+    // 0, 0, 1, 0
+    public static readonly CollisionInfo Left = new CollisionInfo(false, false, true, false);
+
+    // 0, 1, 0, 0
+    public static readonly CollisionInfo Above = new CollisionInfo(false, true, false, false);
+
+    // 1, 0, 0, 0
+    public static readonly CollisionInfo Below = new CollisionInfo(true, false, false, false);
+
+    // 0, 0, 0, 0
+    public static readonly CollisionInfo None = new CollisionInfo(false, false, false, false);
+
+    #endregion Static Variables
 }
