@@ -164,7 +164,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 33.01
+  orthographic size: 14.02
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -776,7 +776,12 @@ GameObject:
   - component: {fileID: 1959652366}
   - component: {fileID: 1959652369}
   - component: {fileID: 1959652368}
+  - component: {fileID: 1959652371}
+  - component: {fileID: 1959652372}
   - component: {fileID: 1959652370}
+  - component: {fileID: 1959652373}
+  - component: {fileID: 1959652375}
+  - component: {fileID: 1959652374}
   m_Layer: 0
   m_Name: Luigi
   m_TagString: Untagged
@@ -841,7 +846,7 @@ Transform:
   m_GameObject: {fileID: 1959652365}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.71, y: -0.65, z: 0}
-  m_LocalScale: {x: 12.5, y: 12.5, z: 1}
+  m_LocalScale: {x: 7.2196255, y: 7.2196255, z: 0.57757}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -902,23 +907,76 @@ MonoBehaviour:
   m_GameObject: {fileID: 1959652365}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b73d17e8daf5b144966e07799e414c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cfcb4759d39d6c4fa448e6d316a82a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curSpeed: 0
-  basicMovementEnabled: 1
-  moveSpeed: 10
-  smoothStop: 10
-  smoothMove: 7.5
-  airMovement: 0.3
-  jumpingEnabled: 1
-  jumpForce: 15
-  doubleJumpEnabled: 1
-  jumpForcePercentage: 0.75
-  doubleJumpTimeout: 500
-  wallSlideEnabled: 1
-  gravityScale: 0.75
-  velocityStartY: 1
-  wallJumpEnabled: 1
-  pushOffForce: {x: 11.25, y: 11.25}
-  movementTimeout: 500
+  MoveSpeed: 10
+  SmoothStop: 10
+  SmoothMove: 7.5
+  AirMovement: 0.75
+--- !u!114 &1959652371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959652365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7112ffe2c7b26f4c863c4a1c29eb81d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1959652372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959652365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405055795b70ec447940a6671474304e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1959652373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959652365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d493a66877ff114439fbc34ab0b846c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ForceY: 15
+--- !u!114 &1959652374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959652365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b917dc9e326c404aad174cbd2f31c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Force: {x: 7.5, y: 10}
+  PercentageSubtracted: 0.15
+  WalkTimeout: 0.25
+--- !u!114 &1959652375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959652365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47a31a8a8fda8142999555be1d74cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  YVelocitySet: -0.5
+  SetterTimer: 2

@@ -6,7 +6,6 @@
 
 #pragma warning restore CS0628 // New protected member declared in sealed class
 
-
     private CollisionInfo (bool bit0, bool bit1, bool bit2, bool bit3) {
         id = new bool[4] { bit0, bit1, bit2, bit3 };
 
