@@ -1,31 +1,45 @@
-﻿public sealed class CollisionInfo {
+﻿public sealed class CollisionInfo
+{
 #pragma warning disable CS0628 // New protected member declared in sealed class
 
-    protected bool[] id; // Maybe faster than using string just for string.Contains(string)
+    /// <summary>
+    /// ID of the collision
+    /// </summary>
+    protected bool[] id;
+    /// <summary>
+    /// Name of the collision based on the ID
+    /// </summary>
     protected string idName = "none"; // Convert bool array to a string
 
 #pragma warning restore CS0628 // New protected member declared in sealed class
 
-    private CollisionInfo (bool bit0, bool bit1, bool bit2, bool bit3) {
+    private CollisionInfo (bool bit0, bool bit1, bool bit2, bool bit3)
+    {
         id = new bool[4] { bit0, bit1, bit2, bit3 };
 
-        if (bit0 || bit1 || bit2 || bit3) {
+        // Assign name based on ID
+        if (bit0 || bit1 || bit2 || bit3)
+        {
             idName = "";
         }
 
-        if (bit0) {
+        if (bit0)
+        {
             idName += "below ";
         }
 
-        if (bit1) {
+        if (bit1)
+        {
             idName += "above ";
         }
 
-        if (bit2) {
+        if (bit2)
+        {
             idName += "left ";
         }
 
-        if (bit3) {
+        if (bit3)
+        {
             idName += "right ";
         }
 
@@ -40,7 +54,8 @@
     /// </summary>
     /// <param name="right"></param>
     /// <returns></returns>
-    public bool ExactlyEqual (CollisionInfo right) {
+    public bool ExactlyEqual (CollisionInfo right)
+    {
         return id[0] == right.id[0] &&
                id[1] == right.id[1] &&
                id[2] == right.id[2] &&
@@ -52,7 +67,8 @@
     /// </summary>
     /// <param name="right"></param>
     /// <returns></returns>
-    public bool Contains (CollisionInfo right) {
+    public bool Contains (CollisionInfo right)
+    {
         // Don't remove the parenthises, it's the only thing keeping the code from going bongers
         return ((id[0] || right.id[0]) && id[0] == right.id[0]) ||
                ((id[1] || right.id[1]) && id[1] == right.id[1]) ||
@@ -60,28 +76,34 @@
                ((id[3] || right.id[3]) && id[3] == right.id[3]);
     }
 
-    public override int GetHashCode () {
+    public override int GetHashCode ()
+    {
         int rightAdd = (id[0] ? 1 : 0) + (id[1] ? 1 : 0) + (id[2] ? 1 : 0) + (id[3] ? 1 : 0);
-        return (int) (idName.Length * 3.14) ^ id.Length / 2 + rightAdd;
+        return (int)(idName.Length * 3.14) ^ id.Length / 2 + rightAdd;
     }
 
-    public override bool Equals (object obj) {
-        if (ReferenceEquals(this, obj)) {
+    public override bool Equals (object obj)
+    {
+        if (ReferenceEquals(this, obj) || GetType() == obj.GetType())
+        {
             return true;
         }
 
-        if (ReferenceEquals(obj, null)) {
+        if (ReferenceEquals(obj, null))
+        {
             return false;
         }
 
-        return Equals((CollisionInfo) obj);
+        CollisionInfo colInfo = (CollisionInfo)obj;
+        return this.Contains(colInfo);
     }
 
     /// <summary>
     /// Returns a nicely formatted string form of the object
     /// </summary>
     /// <returns></returns>
-    public override string ToString () {
+    public override string ToString ()
+    {
         return idName;
     }
 
@@ -95,7 +117,8 @@
     /// <param name="left"></param>
     /// <param name="right"></param>
     /// <returns></returns>
-    public static CollisionInfo operator + (CollisionInfo left, CollisionInfo right) {
+    public static CollisionInfo operator + (CollisionInfo left, CollisionInfo right)
+    {
         return new CollisionInfo(left.id[0] || right.id[0],
                                  left.id[1] || right.id[1],
                                  left.id[2] || right.id[2],
@@ -108,7 +131,8 @@
     /// <param name="left"></param>
     /// <param name="right"></param>
     /// <returns></returns>
-    public static CollisionInfo operator - (CollisionInfo left, CollisionInfo right) {
+    public static CollisionInfo operator - (CollisionInfo left, CollisionInfo right)
+    {
         return new CollisionInfo(!(!left.id[0] || !right.id[0]), !(!left.id[1] || !right.id[1]), !(!left.id[2] || !right.id[2]), !(!left.id[3] || !right.id[3]));
     }
 
@@ -118,7 +142,8 @@
     /// <param name="left"></param>
     /// <param name="right"></param>
     /// <returns></returns>
-    public static bool operator == (CollisionInfo left, CollisionInfo right) {
+    public static bool operator == (CollisionInfo left, CollisionInfo right)
+    {
         return left.Contains(right);
     }
 
@@ -128,7 +153,8 @@
     /// <param name="left"></param>
     /// <param name="right"></param>
     /// <returns></returns>
-    public static bool operator != (CollisionInfo left, CollisionInfo right) {
+    public static bool operator != (CollisionInfo left, CollisionInfo right)
+    {
         // Don't remove the parenthises, it's the only thing keeping the code from going bongers
         return !left.Contains(right);
     }

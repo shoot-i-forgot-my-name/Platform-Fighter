@@ -778,10 +778,12 @@ GameObject:
   - component: {fileID: 1959652368}
   - component: {fileID: 1959652371}
   - component: {fileID: 1959652372}
+  - component: {fileID: 1959652377}
   - component: {fileID: 1959652370}
   - component: {fileID: 1959652373}
   - component: {fileID: 1959652375}
   - component: {fileID: 1959652374}
+  - component: {fileID: 1959652376}
   m_Layer: 0
   m_Name: Luigi
   m_TagString: Untagged
@@ -889,7 +891,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.14, y: 0.27}
+    oldSize: {x: 0.16, y: 0.27}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -910,10 +912,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cfcb4759d39d6c4fa448e6d316a82a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 10
-  SmoothStop: 10
-  SmoothMove: 7.5
-  AirMovement: 0.75
+  character: {fileID: 0}
+  runSpeed: 17.5
+  walkSpeed: 10
+  smoothStop: 10
+  smoothMove: 7.5
+  airMovement: 0.15
 --- !u!114 &1959652371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -938,6 +942,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 405055795b70ec447940a6671474304e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upButton: 119
+  downButton: 115
+  rightButton: 100
+  leftButton: 97
+  runButton: 304
+  jumpButton: 32
 --- !u!114 &1959652373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -950,7 +960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d493a66877ff114439fbc34ab0b846c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForceY: 15
+  forceY: 15
 --- !u!114 &1959652374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -963,9 +973,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b917dc9e326c404aad174cbd2f31c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Force: {x: 7.5, y: 10}
-  PercentageSubtracted: 0.15
-  WalkTimeout: 0.25
+  force: {x: 20, y: 20}
+  percentageSubtraction: 0.191
+  jumpTimeout: 0.25
 --- !u!114 &1959652375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -978,5 +988,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c47a31a8a8fda8142999555be1d74cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YVelocitySet: -0.5
-  SetterTimer: 2
+  yVelocitySetter: -0.5
+  holdingTime: 2
+--- !u!95 &1959652376
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959652365}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 95c0fccd5afe773478a79546af1f1c9e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1959652377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959652365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db8ca8cd73ccfcf4a948b72ec53328f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
