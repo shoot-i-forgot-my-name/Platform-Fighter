@@ -8,7 +8,8 @@ public class CharacterController2D : MonoBehaviour
     private new BoxCollider2D collider = null;
 
     private Vector2 velocity = Vector2.zero;
-    private bool collidingBelow = false;
+    private bool grounded = false;
+    private float timer = 0;
 
     [Tooltip("Speed of the player when running"), Header("Speed values")]
     public float runSpeed = 5;
@@ -28,6 +29,10 @@ public class CharacterController2D : MonoBehaviour
     [Header("Wall Jumping")]
     public Vector2 jumpForce = Vector2.zero;
 
+    [Header("Wall Clinging")]
+    public float yVelocitySetter = 0.5f;
+    public float availableTime = 5;
+
     private void Start ()
     {
         collider = GetComponent<BoxCollider2D>();
@@ -42,8 +47,8 @@ public class CharacterController2D : MonoBehaviour
             var input = Input.GetAxisRaw("Horizontal");
             var running = Input.GetKey(KeyCode.LeftShift);
 
-            var acceleration = this.acceleration * (collidingBelow ? 1 : airPercentage);
-            var deceleration = collidingBelow ? this.deceleration : 0;
+            var acceleration = this.acceleration * (grounded ? 1 : airPercentage);
+            var deceleration = grounded ? this.deceleration : 0;
 
             if (input == 0)
             {
@@ -62,7 +67,7 @@ public class CharacterController2D : MonoBehaviour
 
         #region Jumping
 
-        if (collidingBelow)
+        if (grounded)
         {
 
             velocity.y = 0;
@@ -78,7 +83,7 @@ public class CharacterController2D : MonoBehaviour
 
         #region Collision Resolution, Updating Grounded and Wall Jumping
 
-        collidingBelow = false;
+        grounded = false;
 
         {
             var hits = Physics2D.OverlapBoxAll(transform.position, collider.size, 0);
@@ -102,13 +107,24 @@ public class CharacterController2D : MonoBehaviour
 
                     if (surfaceAngle < 90 && velocity.y < 0)
                     {
-                        collidingBelow = true;
+                        grounded = true;
                     }
 
                     #region Wall Jumping
 
-                    if (surfaceAngle >= 85 && surfaceAngle <= 95 && velocity.x != 0)
+                    if (grounded)
                     {
+                        timer = 0;
+                    }
+
+                    if (surfaceAngle >= 85 && surfaceAngle <= 95 && velocity.x != 0 && !grounded)
+                    {
+                        if (timer <= availableTime)
+                        {
+                            velocity.y = yVelocitySetter;
+                            timer += Time.deltaTime;
+                        }
+
                         if (Input.GetButton("Jump"))
                         {
                             velocity.y = jumpForce.y;
