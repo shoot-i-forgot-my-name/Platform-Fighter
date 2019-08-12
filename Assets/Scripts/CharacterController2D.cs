@@ -1,25 +1,30 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class CharacterController2D : MonoBehaviour
 {
-
     private new BoxCollider2D collider = null;
-
     private Vector2 velocity = Vector2.zero;
+
+    /// <summary>
+    /// If the player is on the ground
+    /// </summary>
     private bool grounded = false;
-    private float timer = 0;
+
+    private Vector2 wCurrentJumpingForce = Vector2.zero;
 
     [Tooltip("Speed of the player when running"), Header("Speed values")]
     public float runSpeed = 5;
+
     [Tooltip("Speed of the player when walking")]
     public float walkSpeed = 3;
 
     [Tooltip("Acceleration of the player"), Header("Changing speeds")]
     public float acceleration = 5;
+
     [Tooltip("Deceleration of the player")]
     public float deceleration = 5;
+
     [Tooltip("Percentage of acceleration when on air"), Range(0, 1)]
     public float airPercentage = 1;
 
@@ -27,11 +32,9 @@ public class CharacterController2D : MonoBehaviour
     public float jumpHeight = 5;
 
     [Header("Wall Jumping")]
-    public Vector2 jumpForce = Vector2.zero;
+    public bool wJumpingEnabled = true;
 
-    [Header("Wall Clinging")]
-    public float yVelocitySetter = 0.5f;
-    public float availableTime = 5;
+    public Vector2 wJumpingForce = Vector2.zero;
 
     private void Start ()
     {
@@ -40,7 +43,6 @@ public class CharacterController2D : MonoBehaviour
 
     private void Update ()
     {
-
         #region Movement
 
         {
@@ -60,62 +62,99 @@ public class CharacterController2D : MonoBehaviour
             }
         }
 
-        #endregion
+        #endregion Movement
 
-        // Adding gravity
-        velocity.y += Physics2D.gravity.y * Time.deltaTime;
-
-        #region Jumping
+        #region Jumping, gravity handling, wall jumping and clinging
 
         if (grounded)
         {
-
             velocity.y = 0;
+
+            #region Jumping
 
             if (Input.GetButton("Jump"))
             {
                 velocity.y = Mathf.Sqrt(2 * jumpHeight * Mathf.Abs(Physics2D.gravity.y));
             }
 
+            #endregion Jumping
+            
+            wCurrentJumpingForce = wJumpingForce;
+        }
+        else
+        {
+            velocity.y += Physics2D.gravity.y * Time.deltaTime;
+
+            var hits = Physics2D.OverlapBoxAll(transform.position, collider.size, 0);
+
+            if (hits.Length > 1)
+            {
+                var separation = hits[1].Distance(collider);
+                // Get angle of the surface
+                var surfaceAngle = Vector2.Angle(separation.normal, Vector2.up);
+
+                // Test if the colliding collider is an actual wall
+                if (surfaceAngle >= 85 && surfaceAngle <= 95)
+                {
+                    #region Wall Jumping
+
+                    if (Input.GetButton("Jump") && wJumpingEnabled && wCurrentJumpingForce.y > 0.5f)
+                    {
+                        // Turn the direction of the wall jumping force to the opposite of the normal
+                        wCurrentJumpingForce.x *= -Mathf.Sign(separation.normal.x);
+                        velocity = wCurrentJumpingForce;
+                        wCurrentJumpingForce /= 1.75f;
+                    }
+
+                    #endregion Wall Jumping
+                }
+            }
         }
 
-        #endregion
+        #endregion Jumping, gravity handling, wall jumping and clinging
+
+        transform.Translate(velocity * Time.deltaTime);
 
         #region Collision solver and grounded updater
 
         grounded = false;
 
         {
+            // This overlap also includes the collider itself
             var hits = Physics2D.OverlapBoxAll(transform.position, collider.size, 0);
 
-            foreach (Collider2D hit in hits)
+            foreach (var hit in hits)
             {
-                // The same collider
+                // If it is the same collider
                 if (hit == collider)
                 {
                     continue;
                 }
 
-                var colliderDistance = hit.Distance(collider);
+                var separation = hit.Distance(collider);
 
                 // Tells us if both colliders are touching
-                if (colliderDistance.isOverlapped)
+                if (separation.isOverlapped)
                 {
-                    transform.Translate(colliderDistance.pointA - colliderDistance.pointB);
+                    // Move the player by the distance and direction
+                    transform.Translate(separation.pointA - separation.pointB);
 
-                    var surfaceAngle = Vector2.Angle(colliderDistance.normal, Vector2.up);
+                    #region Grounded updater
+
+                    // Get the angle of the surface
+                    var surfaceAngle = Vector2.Angle(separation.normal, Vector2.up);
 
                     if (surfaceAngle < 90 && velocity.y < 0)
                     {
                         grounded = true;
                     }
+
+                    #endregion Grounded updater
                 }
             }
         }
 
-        #endregion
-
-        transform.Translate(velocity * Time.deltaTime);
+        #endregion Collision solver and grounded updater
     }
 
     private float GetSpeed (bool running)
@@ -127,5 +166,4 @@ public class CharacterController2D : MonoBehaviour
 
         return walkSpeed;
     }
-
 }
