@@ -81,7 +81,7 @@ public class CharacterController2D : MonoBehaviour
 
         #endregion
 
-        #region Collision solver and grounded updater
+        #region Collision Resolution, Updating Grounded and Wall Jumping
 
         grounded = false;
 
@@ -90,7 +90,7 @@ public class CharacterController2D : MonoBehaviour
 
             foreach (Collider2D hit in hits)
             {
-                // The same collider
+                // The same collider?
                 if (hit == collider)
                 {
                     continue;
@@ -109,6 +109,30 @@ public class CharacterController2D : MonoBehaviour
                     {
                         grounded = true;
                     }
+
+                    #region Wall Jumping
+
+                    if (grounded)
+                    {
+                        timer = 0;
+                    }
+
+                    if (surfaceAngle >= 85 && surfaceAngle <= 95 && velocity.x != 0 && !grounded)
+                    {
+                        if (timer <= availableTime)
+                        {
+                            velocity.y = yVelocitySetter;
+                            timer += Time.deltaTime;
+                        }
+
+                        if (Input.GetButton("Jump"))
+                        {
+                            velocity.y = jumpForce.y;
+                            velocity.x = -Mathf.Sign(velocity.x) * jumpForce.x;
+                        }
+                    }
+
+                    #endregion
                 }
             }
         }
