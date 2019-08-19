@@ -434,7 +434,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620773231}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.230701, y: -0.97979546, z: 0.18536371}
   m_LocalScale: {x: 0.847787, y: 4.173932, z: 1.4513016}
   m_Children: []
@@ -453,6 +453,7 @@ GameObject:
   - component: {fileID: 1744982818}
   - component: {fileID: 1744982821}
   - component: {fileID: 1744982820}
+  - component: {fileID: 1744982822}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -534,13 +535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46d16c0046df27d40834038718c0c4f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 5
-  walkSpeed: 3
-  acceleration: 500
-  deceleration: 25
-  airPercentage: 0.025
-  jumpHeight: 5
-  wJumpHeight: 10
+  velocity: {x: 0, y: 0}
 --- !u!61 &1744982821
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -567,6 +562,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9, y: 3.9475708}
   m_EdgeRadius: 0
+--- !u!114 &1744982822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744982817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04cb95365ccc9b14db77946fe36a914a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runSpeed: 5
+  walkSpeed: 3
+  groundAcceleration: 150
+  groundDeceleration: 75
+  airAcceleration: 7.5
+  jumpHeight: 10
+  wJumping:
+    _stages:
+    - {x: 10, y: 10}
+    - {x: 10, y: 5}
 --- !u!1 &1805599507
 GameObject:
   m_ObjectHideFlags: 0
