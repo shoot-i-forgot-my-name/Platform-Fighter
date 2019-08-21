@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using Serializable = System.SerializableAttribute;
 using UnityEngine;
 
+/// See the Input Manager to edit the buttons or edit the code
+
 [RequireComponent(typeof(CharacterController2D))]
 public class CharacterMovement : MonoBehaviour
 {
+
     #region Variables
 
+    /// <summary>
+    /// Reference to the controller
+    /// </summary>
     private CharacterController2D controller;
 
     #region Movement
@@ -52,22 +58,24 @@ public class CharacterMovement : MonoBehaviour
 
     private void Update()
     {
+        // A and D keys or left and right arrow keys
         float input = Input.GetAxisRaw("Horizontal");
         bool running = Input.GetKey(KeyCode.LeftShift);
         bool jumping = Input.GetButton("Jump");
 
         Move(input, running);
 
-        if (controller.grounded)
+        if (controller.Grounded)
         {
-            controller.velocity.y = 0;
+            controller.Velocity.y = 0;
 
+            // Let's reset count when the player lands on the ground
             wJumping.ResetCount();
             Jump(jumping);
         }
         else
         {
-            controller.velocity.y += Physics2D.gravity.y * Time.deltaTime;
+            controller.Velocity.y += Physics2D.gravity.y * Time.deltaTime;
 
             wJumping.JumpOff(controller, jumping);
         }
@@ -79,28 +87,31 @@ public class CharacterMovement : MonoBehaviour
     {
         if (jumping)
         {
-            controller.velocity.y = Mathf.Sqrt(2 * jumpHeight * Mathf.Abs(Physics2D.gravity.y));
+            controller.Velocity.y = Mathf.Sqrt(2 * jumpHeight * Mathf.Abs(Physics2D.gravity.y));
         }
     }
 
     private void Move(float input, bool running)
     {
-        float acceleration = controller.grounded ? groundAcceleration : airAcceleration;
-        float deceleration = controller.grounded ? groundDeceleration : 0;
+        float acceleration = controller.Grounded ? groundAcceleration : airAcceleration;
+        float deceleration = controller.Grounded ? groundDeceleration : 0;
 
         if (input == 0)
         {
-            controller.velocity.x = Mathf.MoveTowards(controller.velocity.x, 0, deceleration * Time.deltaTime);
+            controller.Velocity.x = Mathf.MoveTowards(controller.Velocity.x, 0, deceleration * Time.deltaTime);
         }
         else
         {
-            controller.velocity.x = Mathf.MoveTowards(controller.velocity.x, (running ? runSpeed : walkSpeed) * input, acceleration * Time.deltaTime);
+            controller.Velocity.x = Mathf.MoveTowards(controller.Velocity.x, (running ? runSpeed : walkSpeed) * input, acceleration * Time.deltaTime);
         }
     }
 
     [Serializable]
     private class WallJumping
     {
+        /// <summary>
+        /// Stages of jumping off walls force. Starts from 0 and ends at the last index
+        /// </summary>
         [SerializeField]
         private Vector2[] _stages = new Vector2[1] { Vector2.zero };
 
@@ -119,17 +130,18 @@ public class CharacterMovement : MonoBehaviour
                 return;
             }
 
-            Collider2D[] hits = Physics2D.OverlapBoxAll(controller.transform.position, controller.collider.size, 0);
+            Collider2D[] hits = Physics2D.OverlapBoxAll(controller.transform.position, controller.Collider.size, 0);
 
             foreach (Collider2D hit in hits)
             {
-                if (hit == controller.collider || JumpCount >= _stages.Length)
+                if (hit == controller.Collider || JumpCount >= _stages.Length)
                 {
                     continue;
                 }
 
-                ColliderDistance2D seperation = hit.Distance(controller.collider);
+                ColliderDistance2D seperation = hit.Distance(controller.Collider);
 
+                // Is it actually collding?
                 if (seperation.isOverlapped)
                 {
                     float surfaceAngle = Vector2.Angle(seperation.normal, Vector2.up);
@@ -140,12 +152,12 @@ public class CharacterMovement : MonoBehaviour
 
                         if (!Mathf.Approximately(takenStage.x, 0))
                         {
-                            controller.velocity.x = takenStage.x * seperation.normal.x;
+                            controller.Velocity.x = takenStage.x * seperation.normal.x;
                         }
 
                         if (!Mathf.Approximately(takenStage.y, 0))
                         {
-                            controller.velocity.y = takenStage.y;
+                            controller.Velocity.y = takenStage.y;
                         }
 
                         JumpCount++;
@@ -155,6 +167,9 @@ public class CharacterMovement : MonoBehaviour
             }
         }
 
+        /// <summary>
+        /// Sets JumpCount to 0
+        /// </summary>
         public void ResetCount ()
         {
             JumpCount = 0;
