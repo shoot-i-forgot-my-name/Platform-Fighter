@@ -1,5 +1,8 @@
-# platform-fighter
-Unity 2D game inspired by Smash and Rivals of Aether
+# ARCHIVED :warning:
 
-## Input handling
-Some input is handled in the code and is handled in Unity's own Input Manager 
+Archived due to inactivity. Contact me at imacommenterat@gmail.com for the ownership of the repository.
+
+
+# platform-fighter
+
+Unity game inspired by Smash and Rivals of Aether, headed by 
